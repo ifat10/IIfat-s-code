@@ -1,0 +1,20 @@
+{
+  "name": "C++ Devcontainer",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/gcc:1": {},
+    "ghcr.io/devcontainers/features/cmake:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "vector-of-bool.cmake-tools",
+        "vadimcn.vscode-lldb"
+      ]
+    }
+  },
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y gdb && git config --global --add safe.directory '*'",
+  "forwardPorts": [],
+  "remoteUser": "vscode"
+}
